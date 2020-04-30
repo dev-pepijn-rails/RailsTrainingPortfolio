@@ -3,22 +3,24 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+> This is a rails 6 application that allows users to create their own portfolio's
 
-* Ruby version
+### Features
 
-* System dependencies
+- Realtime chat engine for comments
+- Blog
+- Portfolio
+- Drag and Drop
 
-* Configuration
+### Code example
 
-* Database creation
+```ruby
+def my_great_method
+  puts "here it is"
+end
+```
 
-* Database initialization
+```javascript
+alert ('Hi there');
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
