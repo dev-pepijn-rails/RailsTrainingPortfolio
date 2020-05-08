@@ -17,5 +17,10 @@ module ApplicationHelper
 	end
 
 
+  def copyright_generator
+    @copyright = FocusenflowViewTool::Renderer.copyright 'Pepijn van de Vorst', 'alle rechten voorbehouden'
+  end 
+
+
 
 end
