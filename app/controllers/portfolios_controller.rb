@@ -1,6 +1,7 @@
 class PortfoliosController < ApplicationController
 
-    before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy] 
+  before_action :set_portfolio_item, only: [:edit, :update, :show, :destroy] 
+  before_action :set_copyright
   layout "portfolio"
 
   access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
@@ -70,5 +71,9 @@ class PortfoliosController < ApplicationController
   def set_portfolio_item
      @portfolio_item = Portfolio.find(params[:id])
   end
+
+  def set_copyright
+      @copyright  = ViewTool::Renderer.copyright 'Pepijn van de Vorst', 'alle rechten voorbehouden'
+    end
 
 end
