@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_copyright
   layout "blog"
 
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
@@ -7,7 +8,7 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     #@blogs = Blog.special_blogs
     #@blogs = Blog.featured_blogs
     @page_title = "My Portfolio Blog"
@@ -88,5 +89,9 @@ class BlogsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def blog_params
       params.require(:blog).permit(:title, :body)
+    end
+
+    def set_copyright
+      @copyright  = ViewTool::Renderer.copyright 'Pepijn van de Vorst', 'alle rechten voorbehouden'
     end
 end
