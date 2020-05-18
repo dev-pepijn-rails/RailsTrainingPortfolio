@@ -1,6 +1,5 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  before_action :set_copyright
   layout "blog"
 
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
@@ -91,7 +90,5 @@ class BlogsController < ApplicationController
       params.require(:blog).permit(:title, :body)
     end
 
-    def set_copyright
-      @copyright  = ViewTool::Renderer.copyright 'Pepijn van de Vorst', 'alle rechten voorbehouden'
-    end
+    
 end
