@@ -5,6 +5,11 @@ class Portfolio < ApplicationRecord
 
   include Placeholder
 
+  mount_uploader :thumb_image, PortfolioUploader 
+  mount_uploader :main_image, PortfolioUploader 
+  # mount_uploader is een methode die wordt geleverd door carrierwave
+  # PortfolioUploader als argument omdat er ook bij. een PdfUploader zou kunnen zijn
+
 	validates_presence_of :title, :body, :main_image, :thumb_image
 
   def self.angular
