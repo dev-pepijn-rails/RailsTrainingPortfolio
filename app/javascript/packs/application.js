@@ -7,12 +7,9 @@ require("@rails/ujs").start()
 require("packs/html.sortable")
 require("jquery-ui-dist/external/jquery/jquery")
 require("jquery-ui-dist/jquery-ui")
-
-
 require("@rails/activestorage").start()
 require("channels")
 require("turbolinks").start()
-
 
 // require("jquery")
 // require("jquery-ui")
@@ -20,6 +17,7 @@ require("turbolinks").start()
 
 import 'bootstrap'
 import './src/application.scss'
+import 'cocoon-js'
 
 (function() {
   var ready, set_positions;
