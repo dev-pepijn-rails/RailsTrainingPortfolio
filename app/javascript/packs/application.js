@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("packs/html.sortable")
 require("jquery-ui-dist/external/jquery/jquery")
 require("jquery-ui-dist/jquery-ui")
+require("sweetalert2/dist/sweetalert2.min")
 require("@rails/activestorage").start()
 require("channels")
 require("turbolinks").start()
@@ -58,6 +59,7 @@ import 'cocoon-js'
   $(document).ready(ready);
 
 }).call(this);
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)

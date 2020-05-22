@@ -43,12 +43,9 @@ module ApplicationHelper
         url: portfolios_path,
         title: 'Portfolio'
       },
-    ]
-      
+    ]      
 
   end
-
-
 
   def nav_helper style, tag_type
     nav_links = ''
@@ -63,6 +60,18 @@ module ApplicationHelper
   def active? path
     "active" if current_page? path
   end
+
+  def notification_type_format(flash_type)
+  case flash_type
+  when 'alert'
+    'warning'
+  when 'notice'
+    'info'
+  else
+    flash_type.to_s
+  end
+  
+end
 
 
 
