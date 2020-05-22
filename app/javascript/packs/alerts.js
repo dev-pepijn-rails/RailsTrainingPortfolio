@@ -17,7 +17,7 @@ let ready = () => {
  
     Toast.fire({
         icon: type,
-        title: "Oooops",
+        title: "Porfolio website:",
         text: message
     })
 };
