@@ -1,5 +1,7 @@
 class TopicsController < ApplicationController
 
+  before_action :set_sidebar_topics
+
   layout 'blog'
 
   def index
@@ -16,4 +18,13 @@ class TopicsController < ApplicationController
     end
 
   end
+
+  private 
+
+  def set_sidebar_topics
+    @sidebar_topics = Topic.with_blogs
+  end
+
+
+
 end
