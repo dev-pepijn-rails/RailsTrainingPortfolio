@@ -27,8 +27,21 @@ a:hover {
  * Base structure
  */
 
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto Slab', serif; 
+}
+
+
+
 html,
 body {
+  font-family: 'Lato', sans-serif;
   height: 100%;
 }
 
@@ -243,4 +256,14 @@ body {
 .skill {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.about-row {
+  width: 1500px;
+}
+
+
+
+.about-card {
+  height: 700px;
 }
